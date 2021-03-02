@@ -1,0 +1,40 @@
+# cd
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+# git
+alias ga="git add"
+alias gb="git branch"
+alias gco="git checkout"
+alias gd="git diff"
+alias gfa="git fetch -a"
+alias gg="git grep -n"
+alias h="history | grep"
+alias ha="history -a"
+alias gl="git log"
+alias glf="git ls-files"
+alias gpo="git push origin $(git branch --show-current)"
+alias gpfo="git push -f origin $(git branch --show-current)"
+alias gpuo="git pull origin $(git branch --show-current)"
+alias gr="git reset"
+alias grmh="git reset --mixed HEAD^"
+alias gs="git status"
+
+function gcm() {
+  git commit -m "$1"
+}
+
+function gcam() {
+  git commit --amend -m "$1"
+}
+
+# ls
+alias l="ls -alF"
+alias ll="ls -l"
+
+# other
+alias sz="source ~/.bashrc"
+alias c="code"

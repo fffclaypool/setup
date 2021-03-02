@@ -1,0 +1,32 @@
+{
+    "name": "python-local-development-container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": false,
+                "python.linting.flake8Enabled": true,
+                "python.formatting.provider": "black",
+                "[python]": {
+                    "editor.formatOnSave": false
+                },
+                "shellformat.path": "/usr/local/bin/shfmt",
+                "extensions.ignoreRecommendations": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.flake8",
+                "ms-python.black-formatter",
+                "timonwong.shellcheck",
+                "foxundermoon.shell-format",
+                "DavidAnson.vscode-markdownlint"
+            ]
+        },
+        "remoteUser": "vscode"
+    }
+}
